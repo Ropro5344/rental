@@ -3,6 +3,45 @@
   color: #90A3BF;
 }
 
+.filters {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border: 3px solid #3563e9;
+  border-radius: 8px;
+
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    label {
+      font-weight: bold;
+      font-family: 'Arial Black', Arial, sans-serif;
+      color: #3563e9;
+      font-size: 1.2rem;
+    }
+
+    select {
+      padding: 0.5rem 1rem;
+      border: 2px solid #3563e9;
+      border-radius: 4px;
+      background-color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      min-width: 150px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        border-color: #54a6ff;
+      }
+    }
+  }
+}
+
 .cars{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));

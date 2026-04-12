@@ -2,7 +2,6 @@
   position: sticky;
   top: 0;
   z-index: 5;
-  //max-width: $breakpoint-lg;
   margin: 0 auto;
   background-color: white;
   padding: 1rem 4rem;
@@ -22,11 +21,10 @@
       color: $color-primary;
       font-size: 2em;
       text-decoration: none;
-      /* Logo */
       font-family: 'Plus Jakarta Sans';
       font-style: normal;
       font-weight: 700;
-      line-height: 150%; /* or 48px */
+      line-height: 150%;
       align-items: center;
       letter-spacing: -0.03em;
       img {
@@ -41,7 +39,7 @@
     flex: 2;
     min-width: auto;
     input[type="search"] {
-      padding: 10px 40px 10px 40px; /* ruimte voor icoon links */
+      padding: 10px 40px 10px 40px;
       width: 80%;
       border: 1px solid #C3D4E9;
       border-radius: 70px;
