@@ -189,11 +189,10 @@ main {
 .advertorial h2 {
   color: white;
   max-width: 50%;
-  /* The Best Platform for Car Rental */
   font-weight: 400;
-  line-height: 150%; /* or 48px */
-  letter-spacing: -0.03em; /* Primary/0 */
-  color: #FFFFFF; /* Inside auto layout */
+  line-height: 150%;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
   margin: 0;
 }
 .advertorial p {
@@ -284,11 +283,10 @@ footer .footer-links .links ul a {
   color: #3563e9;
   font-size: 2em;
   text-decoration: none;
-  /* Logo */
   font-family: "Plus Jakarta Sans";
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* or 48px */
+  line-height: 150%;
   align-items: center;
   letter-spacing: -0.03em;
 }
@@ -302,7 +300,7 @@ footer .footer-links .links ul a {
   min-width: auto;
 }
 .topbar form input[type=search] {
-  padding: 10px 40px 10px 40px; /* ruimte voor icoon links */
+  padding: 10px 40px 10px 40px;
   width: 80%;
   border: 1px solid #C3D4E9;
   border-radius: 70px;
@@ -479,5 +477,3 @@ footer .footer-links .links ul a {
 .account-form label {
   margin-bottom: 1em;
 }
-
-/*# sourceMappingURL=main.css.map */
