@@ -28,5 +28,11 @@ Volg onderstaande stappen om het project op je lokale webserver (XAMPP) te insta
       http://localhost/
       ```
 
+3. **Database importeren**
+
+    * Open phpMyAdmin of een ander MySQL-beheerprogramma.
+    * Maak een nieuwe database aan met de naam `auto`.
+    * Importeer het bestand `rental.sql`.
+
 ---
 

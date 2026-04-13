@@ -13,9 +13,9 @@ if (accountImage) {
     });
 }
 
-const startButton = document.querySelector('.button-primary[href="#"]');
-if (startButton) {
-    startButton.addEventListener('click', function(e) {
+const authButton = document.getElementById('authButton');
+if (authButton) {
+    authButton.addEventListener('click', function(e) {
         e.preventDefault();
         const modal = document.getElementById('loginModal');
         if (modal) modal.classList.remove('hidden');

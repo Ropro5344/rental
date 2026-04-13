@@ -4,11 +4,9 @@
         <h2>Maak een account aan</h2>
         <?php if (isset($_SESSION['message'])): ?>
             <div class="message">
-                <?= $_SESSION['message'] ?>
+                <?= htmlspecialchars($_SESSION['message']) ?>
             </div>
-            <?php
-            session_destroy();
-             endif; ?>
+            <?php unset($_SESSION['message']); endif; ?>
         <label for="email">Uw e-mail</label>
         <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" value="<?= isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : '' ?>" required autofocus>
         <label for="password">Uw wachtwoord</label>
