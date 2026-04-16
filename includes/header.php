@@ -44,7 +44,6 @@
             </div>
         <?php } else { ?>
             <a href="/ons-aanbod" class="button-primary">Start met huren</a>
-            <a href="#" id="authButton" class="button-secondary">Account</a>
         <?php } ?>
 
     </div>

@@ -1,19 +1,14 @@
-<?php require "includes/header.php" ?>
-<main>
-    <form action="/login-handler" class="account-form" method="post">
-        <h2>Log in</h2>
-        <?php if (isset($_SESSION['success'])): ?>
-            <div class="succes-message"><?= htmlspecialchars($_SESSION['success']) ?></div>
-            <?php unset($_SESSION['success']); endif; ?>
-        <?php if (isset($_SESSION['message'])): ?>
-            <div class="message"><?= htmlspecialchars($_SESSION['message']) ?></div>
-            <?php unset($_SESSION['message']); endif; ?>
-        <label for="email">Uw e-mail</label>
-        <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" value="<?= isset($_SESSION['email']) ? htmlspecialchars($_SESSION['email']) : '' ?>" required autofocus>
-        <label for="password">Uw wachtwoord</label>
-        <input type="password" name="password" id="password" placeholder="Uw wachtwoord" required>
-        <input type="submit" value="Log in" class="button-primary">
-    </form>
-</main>
+<?php
+session_start();
+require_once "database/connection.php";
 
-<?php require "includes/footer.php" ?>
+$select_user = $conn->prepare("SELECT * FROM account WHERE email = :email");
+$select_user->bindParam(":email", $_POST['email']);
+$select_user->execute();
+$user = $select_user->fetch(PDO::FETCH_ASSOC);
+
+if (password_verify($_POST['password'], $user['password'])) {
+    $_SESSION['id'] = $user['id'];
+    $_SESSION['email'] = $user['email'];
+    header('Location: /');
+}
